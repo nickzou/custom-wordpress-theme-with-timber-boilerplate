@@ -1,0 +1,42 @@
+{
+  "name": "custom-wordpress-theme-boilerplate",
+  "version": "1.0.0",
+  "description": "Wordpress theme development packages",
+  "main": "index.js",
+  "dependencies": {
+    "laravel-mix": "^6.0.31"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.14.5",
+    "bootstrap": "^5.1.1",
+    "browser-sync": "^2.27.5",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "cross-env": "^7.0.3",
+    "hamburgers": "git@github.com:nickzou/hamburgers.git",
+    "laravel-mix-polyfill": "^3.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "sass-rem": "^3.0.0",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickzou/custom-wordpress-theme-boilerplate.git"
+  },
+  "author": "Nick Zou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickzou/custom-wordpress-theme-boilerplate/issues"
+  },
+  "homepage": "https://github.com/nickzou/custom-wordpress-theme-boilerplate#readme"
+}
