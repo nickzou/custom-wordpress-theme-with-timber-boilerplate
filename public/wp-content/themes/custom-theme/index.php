@@ -1,17 +1,13 @@
+
 <?php
+    $context = Timber::context();
 
-    get_header();
+    get_header(null, $args = $context);
 
-    if(have_posts()):
+    $context['post'] = new Timber\Post();
 
-        while(have_posts()):
+    Timber::render('index.twig', $context);
 
-            the_post();
-
-        endwhile;
-
-    endif;
-
-    get_footer();
+    get_footer(null, $args = $context);
 
 ?>

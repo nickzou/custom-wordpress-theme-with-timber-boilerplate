@@ -1,11 +1,11 @@
+
 <?php
+    $context = Timber::context();
 
-    get_header();
+    get_header(null, $args = $context);
 
+    Timber::render('404.twig', $context);
 
-    echo 'oops, can\'t find your page';
-
-
-    get_footer();
+    get_footer(null, $args = $context);
 
 ?>
